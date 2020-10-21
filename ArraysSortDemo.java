@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class ArraysSortDemo
+public class Arrays_Sort_Demo
 {
     public static void main(String args[])                   
     {
@@ -30,7 +30,7 @@ public class ArraysSortDemo
             System.out.println(a2);
         }
 
-        Arrays.sort(s,new MyComparator());
+        Arrays.sort(s,new UserDefined_Comparator());
         System.out.println("After Sorting by customized sorting :");
         for(String a3:s)
         {
@@ -40,13 +40,14 @@ public class ArraysSortDemo
     }
 }
 
-class MyComparator implements Comparator
+class UserDefined_Comparator implements Comparator
 {
     public int compare(Object obj1,Object obj2)
     {
         String s1=obj1.toString();
         String s2=obj2.toString();
-        return s2.compareTo(s1);
+       // return s2.compareTo(s1);
+          return -s1.compare(S2);
 
     }
 }
